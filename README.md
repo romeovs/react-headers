@@ -1,4 +1,3 @@
-
 # react-headers
 
 A declarative way to set HTTP headers from `react` components.
@@ -91,5 +90,4 @@ header formats.
 
  2. Add validation / warnings when header values do not comply to standards
     or that are not supported by `react-headers`
-
 
