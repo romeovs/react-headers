@@ -31,6 +31,7 @@ class Foo extends React.Component {
 When rendering on the server you can then do:
 
 ```
+ReactDOM.renderComponentToString(<Foo/>)
 const headers = Headers.rewind()
 // { 'cache-control': 'public; max-age=10' }
 ```
@@ -69,8 +70,8 @@ header formats.
 
 ## Roadmap
 
- 1. Implement parsing and mergin algorithms for all response headers
-    where it makes sense to have them in `react-headers`
+  1. Implement parsing and mergin algorithms for all response headers
+     where it makes sense to have them in `react-headers`
     - [ ] Acces-Control-Allow-Origin
     - [ ] Age
     - [ ] Allow
@@ -88,6 +89,8 @@ header formats.
     - [ ] Warning
     - [ ] WWW-Authenticate (?)
 
- 2. Add validation / warnings when header values do not comply to standards
-    or that are not supported by `react-headers`
+  2. Add validation / warnings when header values do not comply to standards
+     or that are not supported by `react-headers`
+
+  3. make sure the client-side included code is as small as possible
 
