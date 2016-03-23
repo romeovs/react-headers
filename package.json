@@ -3,16 +3,33 @@
   "version": "0.0.1",
   "description": "Add headers from within your react components",
   "repository": {
-    "type": "git"
-  , "url": "http://github.com/romeovs/react-headers.git"
+    "type": "git",
+    "url": "http://github.com/romeovs/react-headers.git"
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-register"
   },
   "author": {
     "name": "Romeo Van Snick",
     "email": "romeovs@gmail.com"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.7.2",
+    "babel-preset-all": "github:romeovs/babel-preset-all",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "babel": {
+    "presets": [
+      "all"
+    ]
+  },
+  "dependencies": {
+    "expiry-js": "^0.1.7",
+    "jsverify": "^0.7.1",
+    "type-name": "^2.0.1"
+  }
 }
