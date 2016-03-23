@@ -18,7 +18,10 @@ class Foo extends React.Component {
       <div>
         // ...
         <Headers
-          CacheControl = 'public; max-age=10'
+          CacheControl = 'public; max-age=60'
+          // could also be:
+          // CacheControl = {{ public: true,  'max-age': 60   }}
+          // CacheControl = {{ public: true,  'max-age': '1m' }}
         />
       </div>
     )
@@ -50,7 +53,7 @@ reconcile these concerns, and to decide when to set which `max-age`.  Using
 `react-headers` this is no longer a problem, because it merges the headers
 of all active components on the page in a logical way.  In our example,
 a page with both `A` and `B` on it (containing data that goes stale afer `1w` and data that goes
-stale after `1d`), should go stale after `1d`, so `react-header` merges the
+stale after `1d`), should go stale after `1d`, so `react-headers` merges the
 headers to reflect this.
 
 ```
@@ -59,8 +62,11 @@ A -> Cache-Control: public; max-age=1w  --+
 B -> Cache-Control: public; max-age=1d  --+
 ```
 
-`react-header` has merging algorithms for the headers where it makes sense.
+`react-headers` has merging algorithms for the headers where it makes sense.
 
+On top of that, `react-headers` provides some niceties such as a nice expiry
+format (`1m`, `1d`, ...) for timeouts and dates and simple interpolations of
+header formats.
 
 ## Roadmap
 
