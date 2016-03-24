@@ -15,7 +15,7 @@ const merge = function (a, b) {
   , 'min-fresh': max(a['min-fresh'], b['min-fresh'])
   , 'max-stale': min(a['max-stale'], b['max-stale'])
   , 'no-transform': a['no-transform'] || b['no-transform']
-  , 'public':  (a['public'] || b['public']) && !priv
+  , 'public':  (a['public'] && b['public']) && !priv
   , 'private': priv
   , 'no-store': a['no-store'] || b['no-store']
   , 'no-cache': a['no-cache'] || b['no-cache']
