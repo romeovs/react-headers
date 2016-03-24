@@ -5,6 +5,14 @@ A declarative way to set HTTP headers from `react` components.
 *NOTE: this project is very much under construction, you should <u>NOT</ul> use
 it in production just yet.*
 
+## Installation
+
+Because this thing isn't finished yet, I've not put it on npm yet.  For now, you
+can install it using:
+```
+npm install --save romeovs/react-headers
+```
+
 ## Usage
 
 ```js
