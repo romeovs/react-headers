@@ -22,6 +22,7 @@
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.2",
     "babel-preset-all": "github:romeovs/babel-preset-all",
+    "jsverify": "^0.7.1",
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
@@ -32,7 +33,6 @@
   },
   "dependencies": {
     "expiry-js": "^0.1.7",
-    "jsverify": "^0.7.1",
     "type-name": "^2.0.1"
   }
 }
