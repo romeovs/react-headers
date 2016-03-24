@@ -8,7 +8,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register --recursive"
+    "test": "mocha --compilers js:babel-register --recursive",
+    "build": "babel -D -d build/ src/",
+    "prepublish": "npm run test && npm run build"
   },
   "author": {
     "name": "Romeo Van Snick",
