@@ -1,6 +1,6 @@
 import { expect } from 'chai'
-import age        from '../src/parsers/age'
 import verify     from 'jsverify'
+import age        from '../../src/parsers/age'
 
 describe('age', () => {
 

@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 
-import CacheControl from '../src/headers/cache-control'
+import CacheControl from '../../src/headers/cache-control'
 
 const {
   parse

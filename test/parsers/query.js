@@ -1,6 +1,6 @@
 import { expect } from 'chai'
-import query      from '../src/parsers/query'
 import verify     from 'jsverify'
+import query      from '../../src/parsers/query'
 
 describe('query', () => {
   it('parses single words to true', () => {
