@@ -82,8 +82,8 @@ describe('Cache-Control', () => {
       const a = parse('')
       const b = parse('public')
 
-      expect(merge(a, b)).to.deep.equal({ 'public': true })
-      expect(merge(b, a)).to.deep.equal({ 'public': true })
+      expect(merge(a, b)).to.deep.equal({ })
+      expect(merge(b, a)).to.deep.equal({ })
     })
   })
 })
