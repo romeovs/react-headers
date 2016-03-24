@@ -6,7 +6,8 @@
     "type": "git",
     "url": "http://github.com/romeovs/react-headers.git"
   },
-  "main": "index.js",
+  "main": "build/index.js",
+  "browser": "build/components/browser.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register --recursive",
     "build": "babel -D -d build/ src/",
