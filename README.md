@@ -2,6 +2,9 @@
 
 A declarative way to set HTTP headers from `react` components.
 
+*NOTE: this project is very much under construction, you should <u>NOT</ul> use
+it in production just yet.*
+
 ## Usage
 
 ```js
