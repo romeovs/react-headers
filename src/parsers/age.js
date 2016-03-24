@@ -1,7 +1,7 @@
-import exp  from 'expiry-js'
-import type from '../helpers/type'
+import exp   from 'expiry-js'
+import type  from '../helpers/type'
+import isInt from '../helpers/is-int'
 
-const isInt = val => /^[0-9]+$/.test(val)
 const isExp = val => /^([0-9]+[YyWwMDdhms])+$/.test(val)
 
 export default function (val) {
@@ -15,12 +15,8 @@ export default function (val) {
         return exp(val.replace(/[dyw]/, c => c.toUpperCase())).asSeconds()
       } else if ( isInt(val) ) {
         return Number.parseInt(val)
-      } else {
-        throw new Error(`cannot parse ${val} as age`)
       }
-
-    default:
-      throw new Error(`cannot parse ${val} as age`)
   }
+  throw new Error(`cannot parse ${val} as age`)
 }
 
