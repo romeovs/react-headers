@@ -1,21 +1,16 @@
 import headers from './headers'
 
+const def = (a, b) => a
+
 // merge all the fields from b into a
 export default function (a, b) {
   const res = Object.keys(a).reduce(function (acc, k) {
-    const header = headers[k]
-    if ( !header ) {
-      // we already warned in parse phase
-      return {
-        ...acc
-      , [k]: a[k] // pick a
-      }
-    } else {
-      // merge headerss
-      return {
-        ...acc
-      , [k]: header.merge(a[k], b[k])
-      }
+    const header = headers[k]   || {}
+    const merge  = header.merge || def
+    // merge headerss
+    return {
+      ...acc
+    , [k]: merge(a[k], b[k])
     }
   }, {})
 
