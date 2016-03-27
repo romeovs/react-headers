@@ -13,6 +13,6 @@ export default function (val) {
       }
   }
 
-  throw new Error(`cannot parse ${val} as number`)
+  throw new Error(`cannot parse \`${val}\` as number`)
 }
 

@@ -17,6 +17,6 @@ export default function (val) {
         return Number.parseInt(val)
       }
   }
-  throw new Error(`cannot parse ${val} as age`)
+  throw new Error(`cannot parse \`${val}\` as age`)
 }
 

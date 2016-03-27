@@ -33,7 +33,7 @@ const query = function (val) {
       return val
 
     default:
-      throw new Error(`cannot parse ${val} as a query`)
+      throw new Error(`cannot parse \`${val}\` as a query`)
   }
 }
 
