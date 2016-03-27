@@ -42,5 +42,14 @@ describe('<Headers/>', () => {
     })
   })
 
+  it('renders to nothing', () => {
+    const res = DOM.renderToStaticMarkup(
+      <Headers
+        status={200}
+      />
+    )
+
+    expect(res).to.equal('<noscript></noscript>')
+  })
 })
 
