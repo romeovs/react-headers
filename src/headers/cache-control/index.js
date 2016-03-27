@@ -1,16 +1,12 @@
-import parse    from './parse'
-import merge    from './merge'
-import validate from './validate'
+import parse     from './parse'
+import merge     from './merge'
+import validate  from './validate'
+import unquery   from '../../stringifiers/query'
 
 export default {
-  parse (val) {
-    try {
-      return parse(val)
-    } catch (err) {
-      throw new Error(`${err.message} in Cache-Control`)
-    }
-  }
+  parse
 , merge
+, stringify: unquery
 , validate
 }
 
