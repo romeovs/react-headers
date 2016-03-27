@@ -100,8 +100,9 @@ header formats.
     - [ ] Warning
     - [ ] WWW-Authenticate (?)
 
-  2. Add validation / warnings when header values do not comply to standards
-     or that are not supported by `react-headers`
+  2. Add validation / warnings when header values do not comply to standards,
+     have strange values (eg. Last-Modified is set in the future),
+     or that are not supported by `react-headers` 
 
   3. make sure the client-side included code is as small as possible
 
