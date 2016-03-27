@@ -42,7 +42,7 @@ class Foo extends React.Component {
 When rendering on the server you can then do:
 
 ```
-ReactDOM.renderComponentToString(<Foo/>)
+ReactDOM.renderToString(<Foo/>)
 const headers = Headers.rewind()
 // { 'cache-control': 'public; max-age=10' }
 ```
