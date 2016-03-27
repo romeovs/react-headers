@@ -11,7 +11,7 @@ export default function (a, b) {
       // merge headerss
       return {
         ...acc
-      , [k]: headers.merge(a[k], b[k])
+      , [k]: header.merge(a[k], b[k])
       }
     }
   }, {})

@@ -11,7 +11,7 @@ export default function (props) {
       // extend the result with the parsed field
       return {
         ...acc
-      , [k]: header.parser(props[k])
+      , [k]: header.parse(props[k])
       }
     }
   }, {})
