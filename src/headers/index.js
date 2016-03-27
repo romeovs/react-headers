@@ -1,9 +1,11 @@
+import allow        from './allow'
 import cacheControl from './cache-control'
-import status       from './status'
 import lastModified from './last-modified'
+import status       from './status'
 
 export default {
-  cacheControl
+  allow
+, cacheControl
 , lastModified
 , status
 }

@@ -85,7 +85,7 @@ header formats.
      where it makes sense to have them in `react-headers`
     - [ ] Acces-Control-Allow-Origin
     - [ ] Age
-    - [ ] Allow
+    - [x] Allow
     - [x] Cache-Control
     - [ ] Content-Disposition
     - [ ] Content-Language
