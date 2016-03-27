@@ -9,7 +9,7 @@
   "main": "build/index.js",
   "browser": "build/components/browser.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register --recursive",
+    "test": "mocha --compilers js:babel-register --recursive -f helpers -i",
     "build": "babel -D -d build/ src/",
     "prepublish": "npm run test && npm run build"
   },
