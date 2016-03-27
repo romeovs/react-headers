@@ -14,7 +14,9 @@ describe('Last-Modified', () => {
     // all tested in date
   })
 
-  verify.property('picks the largest date', 'datetime', 'datetime', function (a, b) {
-    return merge(a, b).getTime() === Math.max(a, b)
+  describe('merge', () => {
+    verify.property('picks the largest date', 'datetime', 'datetime', function (a, b) {
+      return merge(a, b).getTime() === Math.max(a, b)
+    })
   })
 })
