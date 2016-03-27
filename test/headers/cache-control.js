@@ -1,10 +1,14 @@
 import { expect } from 'chai'
+import {
+  hasWarning
+} from '../helpers'
 
 import CacheControl from '../../src/headers/cache-control'
 
 const {
   parse
 , merge
+, validate
 } = CacheControl
 
 describe('Cache-Control', () => {
@@ -84,6 +88,16 @@ describe('Cache-Control', () => {
 
       expect(merge(a, b)).to.deep.equal({ })
       expect(merge(b, a)).to.deep.equal({ })
+    })
+  })
+
+  describe('validate', () => {
+    it('warns on unkown keys', () => {
+      hasWarning(validate(parse('foo=10')), /unknown/)
+    })
+
+    it('warns on unkown keys', () => {
+      hasWarning(validate(parse('public;private')), /together/)
     })
   })
 })
