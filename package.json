@@ -22,9 +22,11 @@
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.2",
     "babel-preset-all": "github:romeovs/babel-preset-all",
-    "jsverify": "^0.7.1",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "jsverify": "^0.7.1",
+    "mocha": "^2.4.5",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   },
   "babel": {
     "presets": [
