@@ -101,4 +101,6 @@ header formats.
     - [ ] WWW-Authenticate (?)
 
   2. make sure the client-side included code is as small as possible
+  3. translate keys from and to pascal case (eg. `cacheControl <->
+     Cache-Control`)
 
