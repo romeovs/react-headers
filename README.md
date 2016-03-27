@@ -91,12 +91,12 @@ header formats.
     - [ ] Content-Language
     - [ ] Date
     - [ ] Expires
-    - [ ] Last-Modified
+    - [x] Last-Modified
     - [ ] Link
     - [ ] Refresh
     - [ ] Retry-After
     - [ ] Set-Cookie (?)
-    - [ ] Status
+    - [x] Status
     - [ ] Warning
     - [ ] WWW-Authenticate (?)
 
