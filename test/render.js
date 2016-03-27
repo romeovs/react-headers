@@ -49,7 +49,22 @@ describe('<Headers/>', () => {
       />
     )
 
+    Headers.rewind()
     expect(res).to.equal('<noscript></noscript>')
+  })
+
+  it('accepts unknown headers', () => {
+    DOM.renderToStaticMarkup(
+      <Headers
+        foo='bar'
+      />
+    )
+
+    const headers = Headers.rewind()
+
+    expect(headers).to.deep.equal({
+      foo: 'bar'
+    })
   })
 })
 

@@ -6,7 +6,10 @@ export default function (a, b) {
     const header = headers[k]
     if ( !header ) {
       // we already warned in parse phase
-      return acc
+      return {
+        ...acc
+      , [k]: a[k] // pick a
+      }
     } else {
       // merge headerss
       return {

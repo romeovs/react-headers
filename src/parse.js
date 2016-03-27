@@ -5,8 +5,11 @@ export default function (props) {
   return Object.keys(props).reduce((acc, k) => {
     const header = headers[k]
     if ( !header ) {
-      console.warn(`header \`${k}\` is not known by react-headers`)
-      return acc
+      console.warn(`Warning: header \`${k}\` is not known by react-headers`)
+      return {
+        ...acc
+      , [k]: props[k]
+      }
     } else {
       // extend the result with the parsed field
       try {

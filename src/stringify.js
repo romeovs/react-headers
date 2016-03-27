@@ -8,7 +8,10 @@ export default function (fields) {
     const header = headers[k]
     if ( !header ) {
       // we already warned in parse phase
-      return acc
+      return {
+        ...acc
+      , [k]: fields[k]
+      }
     } else {
       const stringify = header.stringify || def
       // merge headerss
