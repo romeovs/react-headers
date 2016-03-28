@@ -88,6 +88,7 @@ header formats.
     - [x] Allow
     - [x] Cache-Control
     - [ ] Content-Disposition
+    - [ ] Content-Description
     - [ ] Content-Language
     - [ ] Date
     - [x] Expires
