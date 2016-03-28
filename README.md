@@ -90,7 +90,7 @@ header formats.
     - [ ] Content-Disposition
     - [ ] Content-Language
     - [ ] Date
-    - [ ] Expires
+    - [x] Expires
     - [x] Last-Modified
     - [x] Link
     - [ ] Refresh
