@@ -12,6 +12,8 @@ const known = [
 , 's-maxage'
 , 'min-fresh'
 , 'max-stale'
+, 'stale-while-revalidate'
+, 'stale-if-error'
 ]
 
 

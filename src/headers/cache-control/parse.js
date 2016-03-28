@@ -13,6 +13,8 @@ const parse = function (val) {
       , 's-maxage'
       , 'min-fresh'
       , 'max-stale'
+      , 'stale-while-revalidate'
+      , 'stale-if-error'
       ].reduce(function (acc, key) {
         if ( acc[key] !== undefined ) {
           try {
