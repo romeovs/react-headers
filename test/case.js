@@ -1,8 +1,8 @@
 import { expect } from 'chai'
 import {
-  toSnake
-, fromSnake
-, toHeader
+  snakeCase
+, camelCase
+, headerCase
 }  from '../src/helpers/case'
 
 
@@ -30,7 +30,7 @@ describe('case', () => {
     Object.keys(samples).forEach(key => {
       const snake = samples[key]
       const camel = key
-      expect(toSnake(camel)).to.equal(snake)
+      expect(snakeCase(camel)).to.equal(snake)
     })
   })
 
@@ -38,7 +38,7 @@ describe('case', () => {
     Object.keys(samples).forEach(key => {
       const snake = samples[key]
       const camel = key
-      expect(fromSnake(snake)).to.equal(camel)
+      expect(camelCase(snake)).to.equal(camel)
     })
   })
 
@@ -46,8 +46,14 @@ describe('case', () => {
     Object.keys(headers).forEach(key => {
       const camel  = key
       const header = headers[key]
-      expect(toHeader(camel)).to.equal(header)
+      expect(headerCase(camel)).to.equal(header)
     })
   })
 
+  it('fromSnake is idempotent', () => {
+    Object.keys(samples).forEach(key => {
+      const camel = key
+      expect(camelCase(camel)).to.equal(camel)
+    })
+  })
 })

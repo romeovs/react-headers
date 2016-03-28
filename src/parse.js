@@ -1,14 +1,14 @@
 // parse a set of props to a set of parsed headers
 import headers   from './headers'
 import {
-  fromSnake
+  camelCase
 } from './helpers/case'
 
 const def = val => val
 export default function (props) {
   return Object.keys(props).reduce((acc, key) => {
 
-    const k = fromSnake(key)
+    const k = camelCase(key)
 
     const header = headers[k]   || {}
     const parse  = header.parse || def
