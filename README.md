@@ -41,10 +41,10 @@ class Foo extends React.Component {
 
 When rendering on the server you can then do:
 
-```
+```js
 ReactDOM.renderToString(<Foo/>)
 const headers = Headers.rewind()
-// { 'Cache-Control': 'public; max-age=10' }
+// { 'Cache-Control': 'public; max-age=60' }
 ```
 
 You can then set these headers using `express` or `koa`.
