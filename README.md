@@ -92,7 +92,7 @@ header formats.
     - [ ] Date
     - [ ] Expires
     - [x] Last-Modified
-    - [ ] Link
+    - [x] Link
     - [ ] Refresh
     - [ ] Retry-After
     - [ ] Set-Cookie (?)
