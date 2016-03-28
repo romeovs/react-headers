@@ -21,7 +21,8 @@ const parse = function (val) {
             , [key]: age(acc[key])
             }
           } catch (err) {
-            throw new Error(`${err.message} in ${key}`)
+            err.message = `${err.message} in ${key}`
+            throw err
           }
         } else {
           return acc
