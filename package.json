@@ -26,7 +26,8 @@
     "jsverify": "^0.7.1",
     "mocha": "^2.4.5",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "timekeeper": "^0.0.5"
   },
   "babel": {
     "presets": [
