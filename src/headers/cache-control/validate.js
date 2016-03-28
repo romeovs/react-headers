@@ -1,19 +1,18 @@
 
-
 const known = [
   'public'
 , 'private'
-, 'no-store'
-, 'no-cache'
-, 'no-transform'
-, 'must-revalidate'
-, 'proxy-revalidate'
-, 'max-age'
-, 's-maxage'
-, 'min-fresh'
-, 'max-stale'
-, 'stale-while-revalidate'
-, 'stale-if-error'
+, 'noStore'
+, 'noCache'
+, 'noTransform'
+, 'mustRevalidate'
+, 'proxyRevalidate'
+, 'maxAge'
+, 'sMaxage'
+, 'minFresh'
+, 'maxStale'
+, 'staleWhileRevalidate'
+, 'staleIfError'
 ]
 
 

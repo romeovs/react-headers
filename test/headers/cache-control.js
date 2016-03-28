@@ -17,10 +17,10 @@ describe('Cache-Control', () => {
     it('number are interpreted to seconds', () => {
       const i = 'max-age=10;s-maxage=20;min-fresh=30;max-stale=40'
       const o = {
-        'max-age': 10
-      , 's-maxage': 20
-      , 'min-fresh': 30
-      , 'max-stale': 40
+        maxAge: 10
+      , sMaxage: 20
+      , minFresh: 30
+      , maxStale: 40
       }
 
       expect(parse(i)).to.deep.equal(o)
@@ -29,10 +29,10 @@ describe('Cache-Control', () => {
     it('expiries are converted to seconds', () => {
       const i = 'max-age=1m;s-maxage=2m;min-fresh=3m;max-stale=4m'
       const o = {
-        'max-age': 60
-      , 's-maxage': 120
-      , 'min-fresh': 180
-      , 'max-stale': 240
+        maxAge: 60
+      , sMaxage: 120
+      , minFresh: 180
+      , maxStale: 240
       }
 
       expect(parse(i)).to.deep.equal(o)
@@ -49,28 +49,28 @@ describe('Cache-Control', () => {
     it('prefers smallest max-age', () => {
       const a = parse('max-age=10')
       const b = parse('max-age=20')
-      expect(merge(a, b)).to.deep.equal({ 'max-age': 10 })
+      expect(merge(a, b)).to.deep.equal({ maxAge: 10 })
     })
 
     it('prefers smallest s-maxage', () => {
       const a = parse('s-maxage=10')
       const b = parse('s-maxage=20')
 
-      expect(merge(a, b)).to.deep.equal({ 's-maxage': 10 })
+      expect(merge(a, b)).to.deep.equal({ sMaxage: 10 })
     })
 
     it('prefers largest min-fresh', () => {
       const a = parse('min-fresh=10')
       const b = parse('min-fresh=20')
 
-      expect(merge(a, b)).to.deep.equal({ 'min-fresh': 20 })
+      expect(merge(a, b)).to.deep.equal({ minFresh: 20 })
     })
 
     it('prefers smallest max-stale', () => {
       const a = parse('max-stale=10')
       const b = parse('max-stale=20')
 
-      expect(merge(a, b)).to.deep.equal({ 'max-stale': 10 })
+      expect(merge(a, b)).to.deep.equal({ maxStale: 10 })
     })
 
 

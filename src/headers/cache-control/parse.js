@@ -9,12 +9,12 @@ const parse = function (val) {
       // query is parsed, so parse specific subparts
 
       return [
-        'max-age'
-      , 's-maxage'
-      , 'min-fresh'
-      , 'max-stale'
-      , 'stale-while-revalidate'
-      , 'stale-if-error'
+        'maxAge'
+      , 'sMaxage'
+      , 'minFresh'
+      , 'maxStale'
+      , 'staleWhileRevalidate'
+      , 'staleIfError'
       ].reduce(function (acc, key) {
         if ( acc[key] !== undefined ) {
           try {

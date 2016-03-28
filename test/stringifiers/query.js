@@ -16,6 +16,7 @@ describe('unquery', () => {
     return expect(unquery({
       foo: 'bar'
     , baz: 10
-    })).to.equal('foo=bar;baz=10')
+    , maxAge: 10
+    })).to.equal('foo=bar;baz=10;max-age=10')
   })
 })

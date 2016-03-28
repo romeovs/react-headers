@@ -10,17 +10,17 @@ const merge = function (a, b) {
   const priv = a['private'] || b['private']
 
   return clean({
-    'max-age':   min(a['max-age'],   b['max-age'])
-  , 's-maxage':  min(a['s-maxage'],  b['s-maxage'])
-  , 'min-fresh': max(a['min-fresh'], b['min-fresh'])
-  , 'max-stale': min(a['max-stale'], b['max-stale'])
-  , 'no-transform': a['no-transform'] || b['no-transform']
+    maxAge:   min(a.maxAge,   b.maxAge)
+  , sMaxage:  min(a.sMaxage,  b.sMaxage)
+  , minFresh: max(a.minFresh, b.minFresh)
+  , maxStale: min(a.maxStale, b.maxStale)
+  , noTransform: a.noTransform || b.noTransform
   , 'public':  (a['public'] && b['public']) && !priv
   , 'private': priv
-  , 'no-store': a['no-store'] || b['no-store']
-  , 'no-cache': a['no-cache'] || b['no-cache']
-  , 'proxy-revalidate': a['proxy-revalidate'] || b['proxy-revalidate']
-  , 'must-revalidate': a['must-revalidate'] || b['must-revalidate']
+  , noStore: a.noStore || b.noStore
+  , noCache: a.noCache || b.noCache
+  , proxyRevalidate: a.proxyRevalidate || b.proxyRevalidate
+  , mustRevalidate:  a.mustRevalidate  || b.mustRevalidate
   })
 }
 

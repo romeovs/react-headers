@@ -1,10 +1,14 @@
 import type from '../helpers/type'
+import {
+  camelCase
+} from '../helpers/case'
 
 const querypart = function (val) {
   const parts = val.split(/[;,]/)
 
   return parts.reduce(function (acc, el) {
-    const [k, v] = el.split('=').map(el => el.trim())
+    const [key, v] = el.split('=').map(el => el.trim())
+    const k = camelCase(key)
     return {
       ...acc
     , [k]: v === undefined ? true : v
