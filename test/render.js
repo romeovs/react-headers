@@ -19,8 +19,8 @@ describe('<Headers/>', () => {
     const headers = Headers.rewind()
 
     expect(headers).to.deep.equal({
-      status: '200'
-    , cacheControl: 'max-age=1'
+      'Status': '200'
+    , 'Cache-Control': 'max-age=1'
     })
   })
 
@@ -38,7 +38,7 @@ describe('<Headers/>', () => {
     const headers = Headers.rewind()
 
     expect(headers).to.deep.equal({
-      status: '404'
+      'Status': '404'
     })
   })
 
@@ -63,7 +63,7 @@ describe('<Headers/>', () => {
     const headers = Headers.rewind()
 
     expect(headers).to.deep.equal({
-      foo: 'bar'
+      'Foo': 'bar'
     })
   })
 })
