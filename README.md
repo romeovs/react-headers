@@ -81,7 +81,7 @@ header formats.
 
 ## Roadmap
 
-  1. Implement parsing and mergin algorithms for all response headers
+  1. Implement parsing and merging algorithms for all response headers
      where it makes sense to have them in `react-headers`
     - [ ] Acces-Control-Allow-Origin
     - [ ] Age
