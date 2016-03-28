@@ -8,7 +8,7 @@ const specialSnake = {
 const snakeRe = /([a-z])([A-Z])/g
 export const snakeCase = function (str) {
   const s = specialSnake[str.toLowerCase()]
-  return s ? s : str.replace(snakeRe, $ => `${$[0]}-${$[1].toLowerCase()}`)
+  return s ? s : str.replace(snakeRe, $ => `${$[0]}-${$[1]}`).toLowerCase()
 }
 
 // foo-bar  -> fooBar
