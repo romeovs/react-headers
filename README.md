@@ -28,9 +28,9 @@ class Foo extends React.Component {
       <div>
         // ...
         <Headers
-          CacheControl = 'public; max-age=60'
+          cacheControl = 'public; max-age=60'
           // could also be:
-          // CacheControl = {{ public: true,  'max-age': 60   }}
+          // cacheControl = {{ public: true,  'max-age': 60   }}
           // CacheControl = {{ public: true,  maxAge: '1m' }}
         />
       </div>
