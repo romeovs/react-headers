@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import undate     from '../src/stringifiers/date'
+import undate     from '../../src/stringifiers/date'
 
 describe('date stringification', () => {
   it('should return the date is specified in RFC-1123', () => {
