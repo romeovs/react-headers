@@ -44,7 +44,7 @@ When rendering on the server you can then do:
 ```
 ReactDOM.renderToString(<Foo/>)
 const headers = Headers.rewind()
-// { 'cache-control': 'public; max-age=10' }
+// { 'Cache-Control': 'public; max-age=10' }
 ```
 
 You can then set these headers using `express` or `koa`.
