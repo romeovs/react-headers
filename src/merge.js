@@ -7,10 +7,10 @@ export default function (a, b) {
   const res = Object.keys(a).reduce(function (acc, k) {
     const header = headers[k]   || {}
     const merge  = header.merge || def
-    // merge headerss
+    // merge headers
     return {
       ...acc
-    , [k]: merge(a[k], b[k])
+    , [k]: b[k] === undefined ? a[k] : merge(a[k], b[k])
     }
   }, {})
 
