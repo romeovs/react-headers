@@ -21,6 +21,8 @@ const merge = function (a, b) {
   , noCache: a.noCache || b.noCache
   , proxyRevalidate: a.proxyRevalidate || b.proxyRevalidate
   , mustRevalidate:  a.mustRevalidate  || b.mustRevalidate
+  , staleWhileRevalidate: min(a.staleWhileRevalidate, b.staleWhileRevalidate)
+  , staleIfError: min(a.staleIfError, b.staleIfError)
   })
 }
 
